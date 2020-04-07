@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css?family=Biryani|Kaushan+Script|Roboto+Slab&display=swap");
+/** Navbar **/
+#navigation {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  height: 75px;
+}
+
+nav h1 {
+  font-family: 'Kaushan Script', cursive;
+  color: #fed136;
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+nav .desk-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+
+nav .desk-nav li {
+  font-family: 'Biryani', sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;
+  color: #fff;
+  padding: 5px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+nav .desk-nav li:hover {
+  color: #fed136;
+}
+
+nav .mobile-nav-btn {
+  cursor: pointer;
+  display: none;
+  color: white;
+  background-color: #fed136;
+  font-family: 'Biryani', sans-serif;
+  text-transform: uppercase;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+nav .mobile-nav-btn__ham {
+  width: 10px;
+  margin-left: 5px;
+}
+
+@media (min-width: 1000px) {
+  nav {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 775px) {
+  nav {
+    background-color: #212529;
+    height: 50px;
+  }
+  nav h1 {
+    font-size: 1.5rem;
+  }
+  nav .desk-nav {
+    display: none;
+  }
+  nav .mobile-nav-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.mobile-nav {
+  display: none;
+  overflow: hidden;
+  color: white;
+  background-color: #212529;
+  height: 0;
+  -webkit-transition: height 300ms ease-in;
+  transition: height 300ms ease-in;
+}
+
+.mobile-nav--open {
+  height: 185px;
+}
+
+.mobile-nav--menu {
+  padding: 10px;
+}
+
+.mobile-nav--menu li {
+  font-family: 'Biryani', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.mobile-nav--menu li:hover {
+  color: #fed136;
+}
+
+@media (max-width: 775px) {
+  .mobile-nav {
+    display: block;
+  }
+}
+
+.hero {
+  height: 75vh;
+  padding: 10px;
+  background: url("../img/header-bg.jpg") center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero--content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+.hero--content h2 {
+  font-size: 4rem;
+  line-height: 100px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.hero--content h4 {
+  font-size: 2rem;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.hero--content button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 20px 30px;
+  font-family: 'Biryani', sans-serif;
+  background-color: #fed136;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .hero--content h2 {
+    font-size: 2rem;
+    line-height: 50px;
+  }
+  .hero--content h4 {
+    font-size: 1.5rem;
+  }
+  .hero--content button {
+    font-size: 1rem;
+  }
+}
+
+.services-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.services-grid--item {
+  margin: 10px;
+}
+
+.services-grid--item__icon-container {
+  background-color: #fed136;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.services-grid--item__icon-container svg {
+  fill: white;
+  font-size: 50px;
+}
+
+.services-grid--item h4 {
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+.services-grid--item p {
+  color: #999;
+}
+
+@media (max-width: 800px) {
+  .services-grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .services-grid--item {
+    max-width: 500px;
+    margin: 10px auto;
+  }
+}
+
+.projects--grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.projects--item {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  margin: 10px;
+  display: inline-grid;
+  display: -moz-inline-grid;
+  display: -ms-inline-grid;
+}
+
+.projects--item__img {
+  width: 100%;
+}
+
+.projects--item__content {
+  background-color: white;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Biryani', sans-serif;
+}
+
+.section {
+  padding: 100px 10px;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.section-title h3 {
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.section-title p {
+  color: #999;
+  font-style: italic;
+}
+
+.section:nth-child(even) {
+  background-color: #f8f9fa;
+}
+/*# sourceMappingURL=App.css.map */
